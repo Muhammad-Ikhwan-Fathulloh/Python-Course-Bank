@@ -27,10 +27,10 @@ Sebelum memulai, kita perlu menginstall library yang diperlukan seperti `psycopg
 Kita akan menggunakan detail koneksi dari Aiven untuk terhubung ke database PostgreSQL.
 
 ### **Detail Koneksi:**
-- **Host:** `pg-bc25cc-utb-1779.f.aivencloud.com`
-- **Port:** `14992`
+- **Host:** `test.aivencloud.com`
+- **Port:** `5432`
 - **Database:** `defaultdb`
-- **User:** `avnadmin`
+- **User:** `admin`
 - **Password:** `**********`
 - **SSL Mode:** `require`
 
