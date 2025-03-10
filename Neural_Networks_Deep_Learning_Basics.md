@@ -224,5 +224,6 @@ Selamat mencoba mini-project dan eksplorasi lebih lanjut! 🚀
 ## Referensi
 1. [TensorFlow Documentation](https://www.tensorflow.org/)
 2. [PyTorch Documentation](https://pytorch.org/)
-3. [Deep Learning Specialization - Coursera](https://www.coursera.org/specializations/deep-learning)
-4. [MNIST Dataset - TensorFlow](https://www.tensorflow.org/datasets/catalog/mnist)
+3. [MNIST](https://github.com/Muhammad-Ikhwan-Fathulloh/Generative-Adversarial-Network-GAN/tree/main/MNIST)
+4. [Deep Learning Specialization - Coursera](https://www.coursera.org/specializations/deep-learning)
+5. [MNIST Dataset - TensorFlow](https://www.tensorflow.org/datasets/catalog/mnist)
