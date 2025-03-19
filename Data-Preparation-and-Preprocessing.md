@@ -109,3 +109,50 @@ Proses data preparation dan preprocessing sangat penting untuk memastikan data b
 - **Encoding** variabel kategori agar bisa digunakan dalam model.
 - **Feature Scaling** untuk normalisasi data agar memiliki skala yang sama.
 - **Data Versioning** untuk menyimpan hasil preprocessing sehingga mudah direproduksi.
+
+---
+
+# Machine Learning
+
+## Machine Learning Classification
+Setelah data diproses, kita dapat melatih model machine learning sederhana untuk klasifikasi anemia.
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
+
+# Memisahkan fitur dan target
+X = df.drop(columns=['Result'])
+y = df['Result']
+
+# Membagi data menjadi training dan testing
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Melatih model Random Forest
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
+
+# Memprediksi hasil
+y_pred = model.predict(X_test)
+
+# Evaluasi model
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("Classification Report:\n", classification_report(y_test, y_pred))
+```
+Model **RandomForestClassifier** digunakan untuk klasifikasi anemia berdasarkan fitur dalam dataset. Model dievaluasi menggunakan **akurasi** dan **classification report** untuk melihat metrik seperti precision dan recall.
+
+## Data Versioning
+Data versioning penting untuk melacak perubahan dataset dan memastikan reprodusibilitas eksperimen.
+```python
+# Menyimpan versi dataset yang telah diproses
+df.to_csv("processed_anemia_dataset.csv", index=False)
+```
+Dataset yang telah diproses disimpan dalam format CSV agar bisa digunakan kembali.
+
+## Conclusion
+Proses data preparation dan preprocessing sangat penting untuk memastikan data bersih, relevan, dan siap digunakan dalam analisis atau model machine learning. Langkah-langkah yang dilakukan meliputi:
+- **Cleaning** data dari missing values dan outliers.
+- **Encoding** variabel kategori agar bisa digunakan dalam model.
+- **Feature Scaling** untuk normalisasi data agar memiliki skala yang sama.
+- **Machine Learning** untuk klasifikasi anemia.
+- **Data Versioning** untuk menyimpan hasil preprocessing sehingga mudah direproduksi.
